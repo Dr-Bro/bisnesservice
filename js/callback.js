@@ -7,6 +7,12 @@ $(document).ready(function(){
         'transitionOut' : 'none',
         'overlayShow':'true'
    });
+        $("#phonecallbtn2").fancybox({
+        'titlePosition' : 'inside',
+        'transitionIn' : 'none',
+        'transitionOut' : 'none',
+        'overlayShow':'true'
+   });
     });
     //Функция отображения PopUp
     function PopUpShow(){
