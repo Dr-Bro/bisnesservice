@@ -14,30 +14,40 @@
 		
 		<img src="img/logo.png" id="logo">
 		<div class="contacts" align="rigth">
-			<p>Пн - Пт с 09:00 до 18:00 г. Тула, ул. Пионерская, 1</p>
+			<div class="adress">
+				<img src="img/clock.png" style="float:left">
+				<p>Пн - Пт с 09:00 до 18:00 г. Тула, ул. Пионерская, 1</p>
+			</div>
 			<p>+7 (4872) 70-26-01</p>
-			<p>+7 (910) 162-65-78</p>
+			<p style="    margin-top: -18px;">+7 (910) 162-65-78</p>
 			<a href="" class="popup_btn"> Перезвоните нам</a>	
 		</div>
-	<img src="img/mainup.png" style="    margin-top: -200px;">
+	<img src="img/mainup.png" style="margin-top: -200px;">
 	</div>
-<!-- <div id="triangle-up"></div> -->
 	</div>
 	</header>
 <div class="logotext"><h2>КАЧЕСТВО<br> В БУХГАЛТЕРСКОМ ОБСЛУЖИВАНИИ</h2></div>
 	<nav class="nav">
-		<ul>
-			<li>О компании</li>
-			<li>Бухгалтерские услуги</li>
-			<li>Юридические услуги</li>
-			<li>Цены</li>
-			<li>Консультации</li>
-			<li>Новости</li>
-			<li>Контакты</li>
+		<ul class="dropdown">
+			<li class="dropdown-top">О компании</li>
+			<li class="dropdown-top"><a href="second.html">Бухгалтерские услуги</a>
+			<ul class="dropdown-inside">
+				<li>Юридические</li>
+				<li>Профессиональные</li>
+				<li>Аудиторские</li>
+			</ul></li>
+			<li class="dropdown-top">Юридические услуги</li>
+			<li class="dropdown-top">Цены</li>
+			<li class="dropdown-top">Консультации</li>
+			<li class="dropdown-top">Новости</li>
+			<li class="dropdown-top">Контакты</li>
 		</ul>
 	</nav>
 	<div style="text-align:center; font-weight::bold;">
 	<img src="img/maindown.png">
+	</div>
+	<div class="download">
+		<div><img src="img/triangle.png" alt="" id="triangle-download"></div>
 	</div>
 
 	<div class="text-main">
@@ -112,21 +122,20 @@
 
 <p>Точный учет - залог продолжительной работы фирмы. Обращение в организацию Бизнес-Сервис обеспечит бесперебойную работу предприятия.</p>
 	</div>
-
+<div class="phonecall-2">
+		<p>ОСТАВЬТЕ ЗАЯВКУ И МЫ ПЕРЕЗВОНИМ ВАМ В БЛИЖАЙШЕЕ ВРЕМЯ</p>
+		<p><a href="" class="popup_btn">Отправить заявку</a></p>
+	</div>
 	<footer class="footer">
 		<div >
 			<table>
 				<tr>
 					<td rowspan="2"><img src="img/logo.png"></td>
-					<td>© «<Бизнессервис», 2012 — 2016<br>Все права защищены.</td>
-					<td>300004, г. Тула, ул. Пионерская дом 1,<br> Пн - Пт с 09:00 до 18:00</td>
+					<td style="text-align:left">© «<Бизнессервис», 2012 — 2016<br>Все права защищены.<br><br>Любое использование материалов<br> допускается только с согласия редакции.</td>
+					<td style="text-align:left;padding-top: 33px;">300004, г. Тула, ул. Пионерская дом 1,<br><br> Пн - Пт с 09:00 до 18:00<br><br>+7 (4872) 702-601, +7 (910) 162-65-78<br><br>bisnesserv.fk@gmail.com</td>
 					<td rowspan="2"><a href="" class="popup_btn">ПЕРЕЗВОНИТЕ НАМ</a></td>
 				</tr>
-				<tr>
-					<td>Любое использование материалов<br> допускается только с согласия редакции.</td>
-					<td>+7 (4872) 702-601, +7 (910) 162-65-78<br>bisnesserv.fk@gmail.com</td>
-					
-				</tr>
+				
 			</table>
 			<img src="img/footer.png" style="float: right;
     margin-top: -250px;
@@ -135,4 +144,33 @@
 		</div>
 	</footer>
 </body>
+<style>
+ul.dropdown li { position: relative; }
+ ul.dropdown,
+ ul.dropdown-inside {
+ list-style-type: none;
+ }
+ ul.dropdown-inside {
+ position: absolute;
+ left: -9999px;
+ }
+ ul.dropdown li.dropdown-top {
+ display: inline-block;
+ //float: left;
+ //margin: 0 1px 0 0;
+ }
+ ul.dropdown li.dropdown-top a {
+ //padding: 3px 10px 4px;
+ display: block;
+ }
+ //ul.dropdown a.dropdown-top { background: #efefef; }
+ //ul.dropdown a.dropdown-top:hover { padding: 2px 10px 5px; }
+ ul.dropdown li.dropdown-top:hover .dropdown-inside {
+ display: block;
+ left: 0;
+ transition: 0.3s;
+ }
+ ul.dropdown .dropdown-inside { background: #fff; }
+ ul.dropdown .dropdown-inside a:hover { background: #efefef; }
+</style>
 </html>

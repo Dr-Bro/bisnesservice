@@ -1,4 +1,5 @@
-@text: "Open-Sans";
+//@import url(http://allfont.ru/allfont.css?fonts=open-sans);
+@text: "Open-Sans",arial;
 
 body{
 	margin:0;
@@ -22,6 +23,12 @@ header{
 			margin-left: 550px;
 		}
 	}
+	.adress{
+		p{
+
+		}
+	}
+	
 }
 
 
@@ -43,14 +50,54 @@ header{
 			display: inline-block;
 			list-style: none;
 			padding: 15px;
+			//overflow: hidden;
+			height: 15px;
 			a{
 				text-decoration: none;
 				color: black;
+				&:hover{
+					color:rgb(150,41,93);
+				}
 			}
 		}
 	}
+	.sub{
+		background: rgba(220,220,220,0.3);
+		li{
+			display: block;
+			position: relative;
+		}
+
+	}
 }
 
+.nav-2{
+	ul{
+		width: 450px;
+		float: left;
+		strong{
+			font-size: 26px;
+		}
+		li{
+			font-family: @text;
+			font-size: 22px;
+			display: block;
+			list-style: none;
+			padding: 5px;
+			a{
+				text-decoration: none;
+				color: black;
+				&:hover{
+					color:rgb(150,41,93);
+				}
+			}
+		&:after{
+			//content: "\2228";
+			padding-left: 10px;
+		}
+		}
+	}
+}
 
 .text-main{
 	text-align: center;
@@ -61,6 +108,16 @@ header{
 
 }
 
+
+.download{
+	text-align: right;
+	margin-top: -106px;
+	div{
+		display: inline-block;
+		 margin-right: 15.6%;
+
+	}
+}
 
 .calculator{
 	text-align:center;
@@ -106,7 +163,7 @@ header{
 	border-left: 50px solid transparent;
 	border-right: 50px solid transparent;
 	border-top: 100px solid rgb(202,202,202);
-	margin-left: 48%;
+	margin-left: 54%;
 }
 
 .phonecall{
@@ -126,6 +183,22 @@ header{
 	}
 		
 		
+	}
+}
+
+
+.phonecall-2{
+	height: 200px;
+	background-color: rgb(143,26,81);
+	color: white;
+	font-size: 22px;
+	font-family: @text;
+	padding: 30px;
+	p{
+		
+		text-align: center;
+		padding-top: 40px;
+		font-weight: bold;
 	}
 }
 
@@ -176,6 +249,7 @@ header{
 	table{
 	td{
 		padding: 0 30px;
+		font-size: 14px;
 	}
 }
 }
@@ -188,3 +262,41 @@ header{
 	border-right: 50px solid transparent;
 	border-bottom: 100px solid red;
 	}
+
+#triangle-download{
+	    margin-top: -39px;
+    /* margin-left: 6px; */
+    margin-right: -71px;
+}
+
+.popUp{
+	width: 750px;
+	height: 450px;
+	background: grey;
+	form{
+		div{
+			display: inline-block;
+			table{
+				tr{
+					td:first-child{
+						width: 43%;
+						padding-top: 70px;
+
+					}
+				}
+			}
+			input{
+				height: 30px;
+			}
+			label{
+				font-size: 18px;
+				font-weight: bold;
+			}
+			input[name="messenge"]{
+				//height: 60px;
+				//width: 345px;
+				
+			}
+		}
+	}
+}
