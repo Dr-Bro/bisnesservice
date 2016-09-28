@@ -335,7 +335,12 @@ header{
   height: 366px;
   z-index: 4;
 	form{
-		padding: 15px;
+		padding: 5px;
+		label{
+			font-weight: bold;
+			padding-bottom: 10px;
+			padding-top: 10px;
+		}
 
 	}
 	div{
@@ -390,7 +395,14 @@ header{
   height: 366px;
   z-index: 4;
 	form{
-		padding: 15px;
+		padding: 5px;
+			label{
+			font-weight: bold;
+			padding-bottom: 10px;
+			padding-top: 10px;
+
+
+		}
 
 	}
 	div{
@@ -405,7 +417,7 @@ header{
 	}
 	.user{
 		    width: 500px;
-		    margin-top: 35px;
+		    //margin-top: 35px;
 		    div{
 		    	display: inline-block;
 		    	width: 228px;
@@ -438,7 +450,8 @@ header{
   width: 485px;
   height: 44px;
   z-index: 21;
-  color: rgb(150,41,93);
+  color: @color;
+  font-size: 16px;
   		option{
   			color:black;
   		}
@@ -469,7 +482,13 @@ header{
   height: 366px;
   z-index: 4;
 	form{
-		padding: 15px;
+		padding: 5px;
+		label{
+			font-weight: bold;
+			padding-bottom: 10px;
+			padding-top: 10px;
+
+		}
 
 	}
 	div{
@@ -481,6 +500,10 @@ header{
 	}
 	.text-wrap{
 		float: left;
+		input[type="radio"]{
+			color: @color;
+			background: @color;
+		}
 	}
 	.user{
 		    width: 500px;
