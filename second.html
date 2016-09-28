@@ -196,8 +196,8 @@ ul.dropdown li { position: relative; }
 		<p>актуальные цены 2016 года</p>
 		</div>
 			<div class="user">
-			<label>Имя*</label><br><input type="text" name="name">
-			<label>E-mail*</label><br><input type="text" name="name" style="margin-left: 25px;margin-top: -18px;">
+			<div><label>Имя*</label><br><input type="text" name="name"></div>
+			<div style="margin-left:20px;"><label>E-mail*</label><br><input type="text" name="name"></div>
 			<label>Выберите услугу</label><br>
 			<select>
 				<option value="0">Бухгалтерские услуги</option>
@@ -210,6 +210,39 @@ ul.dropdown li { position: relative; }
 		<div><a href="" class="popup_btn">ОТПРАВИТЬ ЗАЯВКУ</a></div>
 	</div>	
 	</form>
+</div>
+<div class="debug">
+	
+<div><label>Имя*</label><br><input type="text" name="name"></div>
+<div><label>E-mail*</label><br><input type="text" name="name" style=""></div>
+</div>
+
+
+
+<div class="calc">
+<form>
+	<div class="text-wrap">
+		<h2>РАССЧИТАЙТЕ<br>СТОИМОСТЬ БУХГАЛТЕРСКОГО<br>ОБСЛУЖИВАНИЯ</h2>
+		<p>бухгалтерских операций в месяц</p>
+			<input type="range" min="0" max="100" step="1" value="50"> 
+		<div>
+		<label> Система налогообложения</label><br>
+		<input type="radio" name="buhsys" checked="true">УСН 6%
+		<input type="radio" name="buhsys">УСН 15%
+		<input type="radio" name="buhsys">ОСНО
+		</div>
+		</div>
+		<div class="user">
+			<div><label>Имя*</label><br><input type="text" name="name"></div>
+			<div style="margin-left:20px;"><label>E-mail*</label><br><input type="text" name="name"></div>
+			</div>
+	<div class="btn-wrap">
+		<div><label>стоимость:</label><br><label name="price">13 000 Р</label></div>
+		<div><a href="" class="popup_btn">ОТПРАВИТЬ ЗАЯВКУ</a></div>
+	</div>	
+	</form>
+</div>
+	
 </div>
 </body>
 </html>
