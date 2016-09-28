@@ -1,5 +1,6 @@
 //@import url(http://allfont.ru/allfont.css?fonts=open-sans);
 @text: "Open-Sans",arial;
+@color:rgb(150,41,93);
 
 body{
 	margin:0;
@@ -529,15 +530,19 @@ header{
 	}
 	input[type=range]::-webkit-slider-thumb {
  -webkit-appearance: none;
- //border: 1px solid #000000;
+ border: 1px solid @color;
  height: 36px;
  width: 16px;
  border-radius: 70px;
- background: #ffffff;
+ background: @color;
  cursor: pointer;
+ color: @color;
  margin-top: -14px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d; /* Add cool effects to your sliders! */
 }
+ input[type=range]::-webkit-slider-runnable-track{
+ 	background:@color; 
+ }
 }
 
 
