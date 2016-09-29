@@ -223,21 +223,22 @@ ul.dropdown li { position: relative; }
 
 
 
-<div class="calc">
+<div class="calcwrapper">
+    <div class="calc">
 <form>
 	<div class="text-wrap">
 		<h2>РАССЧИТАЙТЕ<br>СТОИМОСТЬ БУХГАЛТЕРСКОГО<br>ОБСЛУЖИВАНИЯ</h2>
 		<p style="font-weight: bold;">бухгалтерских операций в месяц</p>
 			<!-- <input type="range" min="0" max="100" step="1" value="50"> -->
+<div id="slider-result" style="margin-left: 50px">25</div>
 			<div class="slider"  style="width: 230px;">
 
 </div>
-<div id="slider-result">50</div>
 <center>
 <div class="rangeinfo"><label for="">0</label><label for="">25</label><label for="">50</label><label for="">75</label><label for="">100</label></div>
 <input id="text" type="text" style="display:none;" />
 </center> 
-		<div>
+		<div class="buhinfo">
 		<label> Система налогообложения</label><br>
 		<input type="radio" name="buhsys" checked="true">УСН 6%
 		<input type="radio" name="buhsys">УСН 15%
@@ -249,10 +250,11 @@ ul.dropdown li { position: relative; }
 			<div style="margin-left:20px;"><label>E-mail*</label><br><input type="text" name="name"></div>
 			</div>
 	<div class="btn-wrap">
-		<div><label>стоимость:</label><br><label id="price">13 000 Р</label></div>
+		<div><label>стоимость:</label><br><label id="price">5990 Р</label></div>
 		<div><a href="" class="popup_btn">ОТПРАВИТЬ ЗАЯВКУ</a></div>
 	</div>	
 	</form>
+</div>
 </div>
 	<script type="text/javascript">
 var prices = [
@@ -265,7 +267,7 @@ $(document).ready(function(){
 $( ".slider" ).slider({
 animate: true,
 range: "min",
-value: 50,
+value: 25,
 min: 1,
 max: 110,
 step: 1,
@@ -276,8 +278,17 @@ $( "#slider-result" ).html(ui.value);
 
 change: function(event, ui) {
 $('#text').attr('value', ui.value);
+changer(ui.value);
 
-var temp = ui.value;
+}
+
+
+});
+});
+$("[name=buhsys]").change(function(){changer(parseInt($('#slider-result').text()))});
+
+function changer(val) {
+	var temp = val;
 // Если УСН 6%
 if($("[name=buhsys]")[0].checked==true){
 if (temp <= 25){
@@ -327,23 +338,6 @@ else if($("[name=buhsys]")[2].checked==true){
 
 $('#price').text(temp + ' Р');
 }
-
-});
-});
-
-if($("[name=buhsys]")[0].checked==true){
-	if (temp <= 25){
-		temp = prices[0][0];
-	}
-	else if(temp > 25 && temp <= 50){
-		temp = prices[0][1]
-	}
-else if($("[name=buhsys]")[1].checked==true){
-
-}
-$("[name=buhsys]")[2].checked;
-}
-
 </script>
 </div>
 </body>
