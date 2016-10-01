@@ -62,3 +62,16 @@
   height: 44px;
   z-index: 21;
 }
+
+
+
+черная форма "начнем сотрудничество прямо сейчас"
+.Прямоугольник_7 {
+  background-color: rgb(0, 0, 0);
+  position: absolute;
+  left: -285px;
+  top: 1298px;
+  width: 795px;
+  height: 248px;
+  z-index: 80;
+}
