@@ -100,6 +100,7 @@ header{
 		li{
 			display: block;
 			position: relative;
+			background: none;
 		}
 
 	}
@@ -108,7 +109,8 @@ header{
 .nav-2{
 	    margin-left: -20%;
 	ul{
-		width: 450px;
+		width: 370px;
+		height: 500px;
 		float: left;
 		strong{
 			font-size: 26px;
@@ -701,9 +703,71 @@ header{
 	}
 }
 
+.jxo-step,.jxo-step-form{
+	.form-group{
+		.form-group-title{
+			color: @color;
+		}
+		input[type="text"]{
+			    width: 158px;
+    height: 34px;
+    padding: 0 10px;
+    background-color: #FFF;
+    border: 1px solid #DCDCDC;
+    border-radius: 2px;
+    color: #000;
+    font-family: "Arial";
+    font-size: 13px;
+    font-weight: 400;
+    width: 300px;
+    //display: block;
+    margin: 5px 0;
+
+		}
+		#email{
+		    margin-left: 29px;
+
+		}
+		#phone{
+			margin-left: 8px;
+		}
+	}
+	.form-group-title{
+		color: @color;
+	}
+}
+
 
 .debug{
 	div{
 		display: inline-block;
 	}
+}
+
+
+
+
+/*Таблицы*/
+.pricetable{
+	
+	table{
+		border-spacing: 0;
+		font-weight: bold;
+	th{
+		background: rgb(208,208,208);
+		height: 60px;
+	}
+	tr{
+		min-height: 45px;
+		
+	}
+	td{
+		border: 1px solid rgb(208,208,208);
+		padding: 15px;
+		font-size: 13px;
+	}
+	.price{
+		width: 35%;
+	}
+}
 }
