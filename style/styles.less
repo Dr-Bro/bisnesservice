@@ -41,7 +41,8 @@ header{
 	#logo{
 		//float: left;
 		position: relative;
-		padding-right: 73px;
+		padding-right: 165px;
+		margin-left: -40px;
 	}
 	#mainup{
 		//float: right;
@@ -118,6 +119,14 @@ header{
 			display: block;
 			list-style: none;
 			padding: 5px;
+			overflow: hidden;
+			height: 25px;
+			&:hover{
+				overflow:visible;
+				transition: 0.3s;
+				height: 60px;
+			}
+			
 			a{
 				text-decoration: none;
 				color: black;
@@ -655,10 +664,14 @@ header{
 	width: 540px;
 	height: 248px;
 	background:black;
+	float: left;
+    margin-left: -20%;
+    margin-right: 60px;
 	div{
 		    padding: 5px;
 		    padding-left: 35%;
 		h2{
+		color: white;
 		font-weight: bold;
     	font-size: 30px;
     	text-transform: uppercase;
@@ -674,6 +687,19 @@ header{
 }
 
 
+.vida{
+	div{
+		width: 274px;
+		height: 450px;
+		background-image: cover;
+		display: inline-block;
+		background-repeat: no-repeat !important;
+		background-size: cover !important;
+		padding: 30px;
+		background: rgba(150,41,93,0.3);
+		vertical-align: top;
+	}
+}
 
 
 .debug{
