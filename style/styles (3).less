@@ -5,10 +5,6 @@
 body{
 	margin:0;
 	font-family: @text;
-	h1{
-		font-size: 18pt;
-		font-weight: 500;
-	}
 }
 
 header{
@@ -83,7 +79,7 @@ header{
 		text-align: center;
 		li{
 			font-family: @text;
-			font-size: 14pt;
+			font-size: 22px;
 			display: inline-block;
 			list-style: none;
 			padding: 15px;
@@ -121,12 +117,15 @@ header{
 		}
 		li{
 			font-family: @text;
-			font-size: 14pt;
+			font-size: 22px;
 			display: block;
 			list-style: none;
 			padding: 5px;
 			overflow: hidden;
 			height: 25px;
+			&:after{
+				//content:"\1405";
+			}
 			&:hover{
 				overflow:visible;
 				transition: 0.3s;
@@ -150,9 +149,9 @@ header{
 
 
 .lvl1 {
-width: 255px;
-min-height: 178px;
-//margin: 5px;
+width: 140px;
+min-height: 150px;
+margin: 5px;
 border-radius: 5px;
 padding: 5px;
 color: #3C3C3C;
@@ -161,18 +160,22 @@ font-size: 14px;
 text-align: center;
 display: inline-block;
 text-decoration: none;
-vertical-align: top;
 }
 .lvl1 img{
 border-radius: 5px;
-border-bottom: solid 3px @color;
-//margin: 0 0 5px 0;
+margin: 0 0 5px 0;
 }
 .lvl1:hover{
 text-decoration: underline;
 }
 
-
+.d6 {
+width: 0;
+height: 0;
+border-top: 50px solid transparent;
+border-left: 100px solid #D0D4DC;
+border-bottom: 50px solid transparent;
+}
 
 .text-main{
 	text-align: center;
@@ -221,7 +224,7 @@ text-decoration: underline;
 	width: 100%;
 	height: 487px;
 	z-index: 4;
-	font-family: @text;
+	font-family: "ArialMT";
 	text-align: center;
 	p{
 		width: 65%;
@@ -684,11 +687,6 @@ text-decoration: underline;
     margin-left: 15%;
 }
 
-.content{
-	    font-family: "Open-Sans",arial;
-    font-size: 12pt;
-}
-
 
 
 
@@ -732,7 +730,7 @@ text-decoration: underline;
 		display: inline-block;
 		background-repeat: no-repeat !important;
 		background-size: cover !important;
-		    padding: 30px 30px 0px 30px;
+		padding: 30px;
 		background: rgba(150,41,93,0.3);
 		vertical-align: top;
 	}
@@ -787,7 +785,7 @@ text-decoration: underline;
 	
 	table{
 		border-spacing: 0;
-		//font-weight: bold;
+		font-weight: bold;
 	th{
 		background: rgb(208,208,208);
 		height: 60px;
@@ -799,7 +797,7 @@ text-decoration: underline;
 	td{
 		border: 1px solid rgb(208,208,208);
 		padding: 15px;
-		font-size: 12pt;
+		font-size: 13px;
 	}
 	.price{
 		width: 35%;
