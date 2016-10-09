@@ -83,7 +83,10 @@ $('#price').text(temp + ' Р');
 
 
 $(document).ready(function(){
-        //Скрыть PopUp при загрузке страницы    
+        callback();
+        callback2();
+        //Скрыть PopUp при загрузке страницы 
+
         PopUpHide();
         $("#phonecallbtn").fancybox({
         'titlePosition' : 'inside',
@@ -106,3 +109,67 @@ $(document).ready(function(){
     function PopUpHide(){
         $("#popup1").hide();
     }
+
+
+/* === AJAX отправка форм ===*/
+    function callback(){
+$('#send-form').submit(function(e){
+//отменяем стандартное действие при отправке формы
+e.preventDefault();
+//берем из формы метод передачи данных
+var m_method=$(this).attr('method');
+//получаем адрес скрипта на сервере, куда нужно отправить форму
+var m_action=$(this).attr('action');
+//получаем данные, введенные пользователем в формате input1=value1&input2=value2...,
+//то есть в стандартном формате передачи данных формы
+var m_data=$(this).serialize();
+$.ajax({
+type: m_method,
+url: m_action,
+data: m_data,
+success: function() {  //сообщение об удачной отправке
+                        jQuery('#send-form').html("<div id='message'></div>");  
+                        jQuery('#message').html("<h2>Вопрос отправлен!</h2>")  
+                        .append("<p>Скоро мы с вами свяжемся.</p>")  
+                        .hide()  
+                        .fadeIn(1500, function() {  
+                        $('#message').append("<i class=\"icon-ok\"></i>");  
+                        });  
+                }
+});
+});
+};
+
+ function callback2(){
+$('#send-form2').submit(function(e){
+//отменяем стандартное действие при отправке формы
+e.preventDefault();
+//берем из формы метод передачи данных
+var m_method=$(this).attr('method');
+//получаем адрес скрипта на сервере, куда нужно отправить форму
+var m_action=$(this).attr('action');
+//получаем данные, введенные пользователем в формате input1=value1&input2=value2...,
+//то есть в стандартном формате передачи данных формы
+var m_data=$(this).serialize();
+$.ajax({
+type: m_method,
+url: m_action,
+data: m_data,
+success: function() {  //сообщение об удачной отправке
+                        jQuery('#send-form2').html("<div id='message'></div>");  
+                        jQuery('#message').html("<h2>Заявка отправлена!</h2>")  
+                        .append("<p>Скоро мы с вами свяжемся.</p>")  
+                        .hide()  
+                        .fadeIn(1500, function() {  
+                        $('#message').append("<i class=\"icon-ok\"></i>");  
+                        });  
+                }
+});
+});
+};
+jQuery(function($) {
+$.mask.definitions['~']='[+-]';
+$('#date').mask('99-99-9999');
+$('#phone').mask('+7 (999) 999-99-99');
+$('#code').mask('aaaaa-яяяяя-99999-*****');
+});
