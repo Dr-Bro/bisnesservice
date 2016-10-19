@@ -26,16 +26,19 @@ header{
 		p{
 		}
 		.contacts{
-			margin-left: 550px;
+			margin-left: 400px;
 			position: relative;
 			z-index: 1000;
+			vertical-align: top;
 		}
 	}
 	.adress{
-		p{
-
-		}
-	}
+ 	    width: 265px;
+    margin-right: 70px;
+    p{
+    	text-align: left;
+    }
+ }
 	
 }
 
@@ -59,12 +62,16 @@ header{
 			margin-left: 0px;
 			position: relative;
 			z-index: 1000;
+			margin-top: 55px;
 		}
 	}
 	.adress{
 		p{
-
-		}
+    	text-align: left;
+   		 }
+	}
+	.download{
+		margin-right: 30px;
 	}
 	
 }
@@ -86,7 +93,7 @@ header{
 			font-size: 14pt;
 			display: inline-block;
 			list-style: none;
-			padding: 15px 25px;
+			padding: 15px 20px;
 			//overflow: hidden;
 			height: 15px;
 			background: white;
@@ -112,9 +119,9 @@ header{
 }
 
 .nav-2{
-	    margin-left: -20%;
+	    margin-left: -11%;
 	ul{
-		width: 313px;
+		width: 226px;
 		height: 500px;
 		float: left;
 		strong{
@@ -127,12 +134,13 @@ header{
 			list-style: none;
 			padding: 5px;
 			overflow: hidden;
-			height: 25px;
+			//height: 35px;
 			margin-left: -44px;
+			
 			&:hover{
 				overflow:visible;
-				transition: 0.3s;
-				height: 60px;
+				//transition: 0.3s;
+				//height: 60px;
 			}
 			
 			a{
@@ -150,6 +158,31 @@ header{
 	}
 }
 
+.topmenusecond>li{
+	background: url(../img/vert_css_menu_0.png) no-repeat 0 0; 
+}
+.topmenusecondsecond li:after{
+				content: url('../img/menu_arrow2.png');
+				width: 15px;
+				height: 15px;
+			}
+.topmenusecondsecond li:hover:after{
+				content: url('../img/menu_arrow.png');
+				width: 15px;
+				height: 15px;
+				transform: rotate(180deg);
+			}
+.second_second_sub{
+	height: auto;
+}
+
+.second_second_sub li:after{
+	content: " " !important;
+}
+.second_second_sub li{
+	height: 40px !important;
+	
+}
 
 .lvl1 {
 width: 255px;
@@ -273,7 +306,7 @@ text-decoration: underline;
 	padding: 30px;
 	p{
 		margin-left: 0px !important;
-		text-align: center;
+		text-align: center !important;
 		padding-top: 40px;
 		font-weight: bold;
 	}
@@ -349,7 +382,7 @@ text-decoration: underline;
 #triangle-download{
 	    margin-top: -39px;
     /* margin-left: 6px; */
-    margin-right: -71px;
+    margin-right: -73px;
 }
 
 .popUp{
@@ -681,6 +714,8 @@ text-decoration: underline;
 
 /*Шаблоны второстепенных страниц*/
 .breadcrumb{
+	padding: 0px;
+	padding-top: 20px;
 	li{
 		display: inline-block;
 		list-style: none;
@@ -699,7 +734,8 @@ text-decoration: underline;
     	
     }
     p{
-    	
+    	width: 97%;
+    	text-align: justify;
     }
 }
 
@@ -720,7 +756,7 @@ text-decoration: underline;
     margin-right: 60px;
 	div{
 		    padding: 5px;
-		    padding-left: 35%;
+		    padding-left: 37%;
 		h2{
 		color: white;
 		font-weight: bold;
@@ -793,6 +829,10 @@ text-decoration: underline;
 	}
 }
 
+
+.fancybox-inner{
+	overflow: visible !important;
+}
 
 
 

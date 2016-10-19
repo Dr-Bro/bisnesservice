@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model package="migxcomments" baseClass="xPDOObject" platform="mysql" defaultEngine="MyISAM" version="1.1">
+	<object class="migxComment" table="migxcomment" extends="xPDOSimpleObject" >
+	<field key="resource_id" dbtype="int" precision="11" phptype="integer" null="false" default="0" />
+	<field key="date" dbtype="datetime" phptype="datetime" null="false" />
+	<field key="name" dbtype="varchar" precision="255" phptype="string" null="false" default="" />
+	<field key="surname" dbtype="varchar" precision="255" phptype="string" null="false" default="" />
+	<field key="email" dbtype="varchar" precision="255" phptype="string" null="false" default="" />
+	<field key="phone" dbtype="varchar" precision="255" phptype="string" null="false" default="" />
+	<field key="text" dbtype="text" phptype="string" null="false" default="" />
+	<field key="reply_author" dbtype="varchar" precision="255" phptype="string" null="false" default="" />
+	<field key="reply_text" dbtype="text" phptype="string" null="false" default="" />
+	<field key="notify" dbtype="tinyint" precision="1" attributes="unsigned" phptype="integer" null="false" default="0" />
+	<field key="published" dbtype="tinyint" precision="1" attributes="unsigned" phptype="integer" null="false" default="0" />
+	<field key="createdby" dbtype="int" precision="10" phptype="integer" null="false" default="0" />
+	<field key="createdon" dbtype="datetime" phptype="datetime" null="false" />
+	<field key="editedby" dbtype="int" precision="10" phptype="integer" null="false" default="0" />
+	<field key="editedon" dbtype="datetime" phptype="datetime" null="false" />
+	<field key="deleted" dbtype="tinyint" precision="1" attributes="unsigned" phptype="integer" null="false" default="0" />
+	<field key="deletedon" dbtype="datetime" phptype="datetime" null="false" />
+	<field key="deletedby" dbtype="int" precision="10" phptype="integer" null="false" default="0" />
+	<field key="publishedon" dbtype="datetime" phptype="datetime" null="false" />
+	<field key="publishedby" dbtype="int" precision="10" phptype="integer" null="false" default="0" />
+	<index alias="PRIMARY" name="PRIMARY" primary="true" unique="true">
+		<column key="id" collation="A" null="false" />
+	</index>
+	<aggregate alias="Resource" class="modResource" local="resource_id" foreign="id" cardinality="one" owner="foreign" />
+	</object>
+</model>
